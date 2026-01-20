@@ -4712,13 +4712,8 @@ input[type="button"].btn-block {
   background-size: 100% 100%;
 }
 
-@media (max-width: 575.98px) {
-  .navbar-expand-sm > .container,
-  .navbar-expand-sm > .container-fluid {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
+
+
 
 @media (min-width: 576px) {
   .navbar-expand-sm {
@@ -8664,6 +8659,7 @@ button.bg-dark:focus {
 .float-none {
   float: none !important;
 }
+
 
 @media (min-width: 576px) {
   .float-sm-left {
