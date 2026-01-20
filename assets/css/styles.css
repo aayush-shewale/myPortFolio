@@ -12,6 +12,13 @@
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
+/* ===== GLOBAL RESET FOR MOBILE ===== */
+/* 1. RESET / GLOBAL */
+/* ===============================
+   GLOBAL SAFETY (FONT SAFE)
+   =============================== */
+
+/* Box sizing — does NOT affect fonts */
 @import url("https://fonts.googleapis.com/css?family=Baloo+Paaji|Open+Sans:300,300i,400,400i,600,600i,700,700i");
 :root {
   --blue: #1e549f;
@@ -43,7 +50,6 @@
   --font-family-sans-serif: "Open Sans", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
-
 *,
 *::before,
 *::after {
@@ -595,22 +601,13 @@ pre code {
 }
 
 .row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  margin-right: 0;
-  margin-left: 0;
-  grid-template-columns: repeat(auto-fit,minmax(220px, 1fr));
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  max-width: 100%;
 }
+
 
 .no-gutters {
   margin-right: 0;
@@ -2109,52 +2106,87 @@ pre code {
 }
 
 @media (max-width: 575.98px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    gap: 0 !important;
+  }
+
+  img, svg, video, iframe, canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
   .table-responsive-sm {
-    display: block;
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-  }
-  .table-responsive-sm > .table-bordered {
-    border: 0;
   }
 }
 
-@media (max-width: 767.98px) {
-  .table-responsive-md {
-    display: block;
+
+@media (max-width: 768px) {
+  html, body {
     width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
   }
-  .table-responsive-md > .table-bordered {
-    border: 0;
+
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    gap: 0 !important;
+  }
+
+  * {
+    max-width: 100%;
   }
 }
+
 
 @media (max-width: 991.98px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .row {
+    max-width: 100%;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
   .table-responsive-lg {
-    display: block;
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-  }
-  .table-responsive-lg > .table-bordered {
-    border: 0;
   }
 }
 
+
 @media (max-width: 1199.98px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .row {
+    max-width: 100%;
+  }
+
   .table-responsive-xl {
-    display: block;
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .table-responsive-xl > .table-bordered {
-    border: 0;
-  }
 }
+
 
 .table-responsive {
   display: block;
