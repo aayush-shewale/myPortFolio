@@ -36,3 +36,13 @@ $('#nav-toggle').click(function(){
     $(this).toggleClass('is-active')
     $('ul.nav').toggleClass('show');
 });
+
+window.addEventListener("load", function () {
+  document.querySelector(".header-content").classList.add("show");
+});
+window.addEventListener("scroll", function () {
+  document.querySelector(".about-img").classList.add("show");
+});
+window.addEventListener("scroll", function () {
+  document.querySelector(".about-caption").classList.add("show");
+});
