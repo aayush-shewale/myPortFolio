@@ -12280,3 +12280,31 @@ pre .code {
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
+.header-content {
+  opacity: 0;
+  transform: translateY(300px);
+  transition: opacity 2.5s ease, transform 0.6s ease;
+}
+
+.header-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.about-img{
+  opacity: 0;
+  transform: translateX(-600px);
+  transition: opacity 2.5s ease, transform 0.6s ease;
+}
+.about-img.show{
+  opacity: 1;
+  transform: translateX(0);
+}
+.about-caption{
+  opacity: 0;
+  transform: translateX(600px);
+  transition: opacity 2.5s ease, transform 0.6s ease;
+}
+.about-caption.show{
+  opacity: 1;
+  transform: translateX(0);
+}
