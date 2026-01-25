@@ -46,3 +46,7 @@ window.addEventListener("scroll", function () {
 window.addEventListener("scroll", function () {
   document.querySelector(".about-caption").classList.add("show");
 });
+const disabled = document.getElementById("dis");
+disabled.addEventListener("click", function(){
+    alert("This button is temporarily disabled.");
+})
