@@ -48,5 +48,5 @@ window.addEventListener("scroll", function () {
 });
 const disabled = document.getElementById("dis");
 disabled.addEventListener("click", function(){
-    alert("This button is temporarily disabled.");
+    alert("This button is temporarily disabled by Aayush.");
 })
